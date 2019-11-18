@@ -9,7 +9,7 @@ CalculatorApp.controller('CalcCtrl', ['$scope', 'CalculatorService', function ($
     $scope.ShowResult = function () {
         $scope.output = CalculatorService.ShowResult($scope.expression);
         $scope.expression = $scope.output;
-    };  
+    };   
 
 }]);
 

@@ -83,7 +83,7 @@
                         expression += "/100";
                         output = String(eval(expression));
                     }
-
+ 
                 expression = output;
                 return output;
             },
