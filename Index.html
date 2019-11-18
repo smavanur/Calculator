@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="row">
-        <div ng-app="CalculatorApp" ng-controller="CalcCtrl" class="col-md-12 col-sm-6 col-xs-6">
+        <div ng-app="CalculatorApp" ng-controller="CalcCtrl" class="col-md-12 col-sm-12 col-xs-12">
             <h1> Calculator</h1>
             <form class="calc">
                 <p>
@@ -19,72 +19,75 @@
                         </tr>
                         <tr>
                             <td style="width:25%">
-                                <a class="calc-button calc-button-darkColor  " ng-click='updateOutPutForSpecialChars(0)'>AC</a>
+                                <a class="calc-button calc-button-darkColor  " ng-click="ReadInput('AC')" >AC</a>
+                                   <!--ng-click='updateOutPutForSpecialChars(0)'-->
                             </td>
                             <td style="width:25%">
-                                <a class="calc-button calc-button-darkColor  " ng-click='updateOutPutForSpecialChars(-output)'>+/-</a>
+                                <a class="calc-button calc-button-darkColor  "  ng-click="ReadInput('+/-')" >+/-</a>
+                                   <!--ng-click='updateOutPutForSpecialChars(-output)'-->
                             </td>
                             <td>
-                                <a class="calc-button calc-button-darkColor  " ng-click='updateOutPutForSpecialChars(output/100)'>%</a>
+                                <a class="calc-button calc-button-darkColor  " ng-click="ReadInput('%')">%</a>
+                                   <!--ng-click='updateOutPutForSpecialChars(output/100)'-->
                             </td>
 
                             <td>
-                                <a class="calc-button calc-button-yellow  " ng-click='operate("/")'>÷</a>
+                                <a class="calc-button calc-button-yellow  " ng-click='ReadInput("/")'>÷</a>
                             </td>
                         </tr>   
                             <tr>                              
                                 <td>
-                                    <a class="calc-button " ng-click="updateOutput(7)"> 7</a>
+                                    <a class="calc-button " ng-click="ReadInput(7)"> 7</a>
                                 </td>
                                 <td >
-                                    <a class="calc-button " ng-click="updateOutput(8)"> 8</a>
+                                    <a class="calc-button " ng-click="ReadInput(8)"> 8</a>
                                 </td>
                                 <td >
-                                    <a class="calc-button " ng-click="updateOutput(9)"> 9</a>
+                                    <a class="calc-button " ng-click="ReadInput(9)"> 9</a>
                                 </td>
                                 
                                 <td  >
-                                    <a class="calc-button calc-button-yellow " ng-click="operate('*')"> *</a>
+                                    <a class="calc-button calc-button-yellow " ng-click="ReadInput('*')"> *</a>
                                 </td>
                             </tr>
                             <tr>                                
                                 <td>
-                                    <a class="calc-button" ng-click="updateOutput(4)"> 4</a>
+                                    <a class="calc-button" ng-click="ReadInput(4)"> 4</a>
                                 </td>
                                 <td >
-                                    <a class="calc-button" ng-click="updateOutput(5)"> 5</a>
+                                    <a class="calc-button" ng-click="ReadInput(5)"> 5</a>
                                 </td>
                                 <td >
-                                    <a class="calc-button" ng-click="updateOutput(6)"> 6</a>
+                                    <a class="calc-button" ng-click="ReadInput(6)"> 6</a>
                                 </td>                              
                                 <td  >
-                                    <a class="calc-button calc-button-yellow" ng-click="operate('-')"> -</a>
+                                    <a class="calc-button calc-button-yellow" ng-click="ReadInput('-')"> -</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td >
-                                    <a class="calc-button " ng-click="updateOutput(1)"> 1</a>
+                                    <a class="calc-button " ng-click="ReadInput(1)"> 1</a>
                                 </td>
                                 <td >
-                                    <a class="calc-button " ng-click="updateOutput(2)"> 2</a>
+                                    <a class="calc-button " ng-click="ReadInput(2)"> 2</a>
                                 </td>
                                 <td >
-                                    <a class="calc-button " ng-click="updateOutput(3)"> 3</a>
+                                    <a class="calc-button " ng-click="ReadInput(3)"> 3</a>
                                 </td>                               
                                 <td  >
-                                    <a class="calc-button calc-button-yellow" ng-click="operate('+')"> +</a>
+                                    <a class="calc-button calc-button-yellow" ng-click="ReadInput('+')"> +</a>
                                 </td>
                             </tr>
                             
                         <tr>
                             <td colspan="2">
-                                <a class="calc-button" ng-click="updateOutput(0)">0</a>
+                                <a class="calc-button" ng-click="ReadInput(0)">0</a>
                             </td>
                             <td>
-                                <a class="calc-button" ng-click="updateOutput('.')">.</a>
+                                <a class="calc-button" ng-click="ReadInput('.')">.</a>
                             </td>
                             <td>
-                                <a class="calc-button calc-button-yellow  " ng-click="equal()">=</a>
+                                <a class="calc-button calc-button-yellow  " ng-click="ShowResult()">=</a>
                             </td>
                         </tr>
                     </table>
