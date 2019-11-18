@@ -17,8 +17,7 @@
                     var result = String(eval(evalExpresssion));
                     if (String(result).length > 15) {
                         result = Number.parseFloat(result).toExponential(0);
-                    }
-                    console.log("Success1");
+                    }                   
                     return result;
                 },
                 SUBSTRACT: function () { },
