@@ -78,6 +78,7 @@
                 else if (outputVal == "+/-") {
                     output = "-" + output;
                 }
+                // test
                 else
                     if (outputVal == "%") {
                         expression += "/100";
